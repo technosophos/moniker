@@ -1,6 +1,6 @@
 package moniker
 
-// Descriptors is a dynamically generated list of words.
+// Descriptors is a generated list of words.
 var Descriptors = []string{
 	"affable",
 	"aged",
@@ -39,6 +39,7 @@ var Descriptors = []string{
 	"callous",
 	"cantankerous",
 	"cautious",
+	"calico",
 	"cloying",
 	"clunky",
 	"coiled",
@@ -192,6 +193,7 @@ var Descriptors = []string{
 	"lanky",
 	"laughing",
 	"lazy",
+	"left",
 	"limping",
 	"linting",
 	"listening",

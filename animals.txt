@@ -196,6 +196,7 @@ seastar
 starfish
 sponge
 squid
+shark
 tapir
 tarsier
 termite
