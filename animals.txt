@@ -190,7 +190,7 @@ skunk
 sasquatch
 sloth
 snail
-stingeray
+stingray
 swan
 seastar
 starfish
