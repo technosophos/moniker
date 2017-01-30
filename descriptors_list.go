@@ -360,7 +360,7 @@ var Descriptors = []string{
 	"waxen",
 	"wayfaring",
 	"whimsical",
-	"whistful",
+	"wistful",
 	"whopping",
 	"wiggly",
 	"willing",
