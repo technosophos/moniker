@@ -3,6 +3,7 @@ package moniker
 // Animals is a generated list of words.
 var Animals = []string{
 	"aardvark",
+	"aardwolf",
 	"albatross",
 	"alligator",
 	"alpaca",
@@ -194,7 +195,7 @@ var Animals = []string{
 	"sasquatch",
 	"sloth",
 	"snail",
-	"stingeray",
+	"stingray",
 	"swan",
 	"seastar",
 	"starfish",
