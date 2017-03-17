@@ -4,6 +4,7 @@ package moniker
 var Animals = []string{
 	"aardvark",
 	"aardwolf",
+	"abalone",
 	"albatross",
 	"alligator",
 	"alpaca",
@@ -11,7 +12,6 @@ var Animals = []string{
 	"angelfish",
 	"ant",
 	"anteater",
-	"antelope",
 	"antelope",
 	"arachnid",
 	"armadillo",
