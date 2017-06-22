@@ -31,11 +31,11 @@ brown
 bumptious
 bunking
 busted
+calico
 calling
 callous
 cantankerous
 cautious
-calico
 cloying
 clunky
 coiled
@@ -356,7 +356,6 @@ washing
 waxen
 wayfaring
 whimsical
-wistful
 whopping
 wiggly
 willing
@@ -366,6 +365,7 @@ wintering
 wise
 wishful
 wishing
+wistful
 wizened
 wobbling
 wobbly
