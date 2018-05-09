@@ -60,7 +60,7 @@ eel
 elephant
 elk
 emu
-ferrit
+ferret
 fish
 flee
 fly
@@ -114,7 +114,7 @@ liger
 lightningbug
 lion
 lionfish
-lizzard
+lizard
 llama
 lobster
 lynx
@@ -175,7 +175,7 @@ quetzal
 quokka
 quoll
 rabbit
-racoon
+raccoon
 ragdoll
 rat
 rattlesnake
