@@ -159,7 +159,7 @@ var Descriptors = []string{
 	"intentional",
 	"interested",
 	"interesting",
-	"invinvible",
+	"invincible",
 	"invisible",
 	"invited",
 	"iron",
