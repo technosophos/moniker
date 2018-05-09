@@ -103,7 +103,7 @@ ladybug
 lamb
 lambkin
 lion
-lizzard
+lizard
 lionfish
 liger
 lightningbug
