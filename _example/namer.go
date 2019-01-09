@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-
 	".."
 )
 
 func main() {
-	n := moniker.NewAlliterator()
-	fmt.Printf("Your name is %q\n", n.NameSepPrefix(" ", "q"))
+	n := moniker.New()
+	fmt.Printf("Your name is %q\n", n.Name())
+	fmt.Printf("Your name is %q\n", n.NameWithOptions(" ", "á", true))
+	fmt.Printf("Your name is %q\n", n.NameWithOptions(" ", "à", false))
 }

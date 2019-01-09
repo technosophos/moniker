@@ -20,75 +20,44 @@ type defaultNamer struct {
 	r                *rand.Rand
 }
 
-func (n *defaultNamer) NameSep(sep string) string {
-	a := n.Descriptor[n.r.Intn(len(n.Descriptor))]
-	b := n.Noun[n.r.Intn(len(n.Noun))]
-	return strings.Join([]string{a, b}, sep)
-}
-
-func(n *defaultNamer) NamePrefix(prefix string) string {
-	// TODO
-	return n.NameSep(" ")
-}
-
 func (n *defaultNamer) Name() string {
 	return n.NameSep(" ")
 }
 
-func (n *defaultNamer) NameSepPrefix(sep string, prefix string) string {
-	return n.NameSep(" ")
+func (n *defaultNamer) NameSep(sep string) string {
+	return n.NameWithOptions(sep, "", false)
 }
 
-// NewAlliterator returns a Namer that alliterates.
-//
-//	wonky wombat
-//	racing rabbit
-//	alliterating alligator
-//
-// FIXME: This isn't working yet.
-func NewAlliterator() Namer {
-	return &alliterator{
-		Descriptor: Descriptors,
-		Noun:       Animals,
-		r:          rand.New(rand.NewSource(time.Now().UnixNano())),
+func (n *defaultNamer) NameWithOptions(sep string, startingLetter string, alliterate bool) string {
+	filteredDescriptor :=  n.Descriptor
+	if startingLetter != "" { 
+		filteredDescriptor = choose(n.Descriptor, startingLetter)
+		if len(filteredDescriptor) <= 0 {
+			return "No mathing startletter found"
+		}
 	}
-}
 
-type alliterator struct {
-	Descriptor, Noun []string
-	r                *rand.Rand
-}
+	filteredName := n.Noun
+	if alliterate {
+		filteredName = choose(n.Noun, startingLetter)
+		if len(filteredName) <= 0 {
+			return "No mathing startletter found"
+		}
+	}
 
-func (n *alliterator) Name() string {
-	return n.NameSep(" ")
-}
-
-func(n *alliterator) NamePrefix(prefix string) string {
-	return n.NameSepPrefix(" ", prefix)
-}
-
-func (n *alliterator) NameSep(sep string) string {
-	prefix := "a"
-	return n.NameSepPrefix(sep, prefix)
-}
-
-func (n *alliterator) NameSepPrefix(sep string, prefix string) string {
-	filteredDescriptor := choose(n.Descriptor, prefix)
-	filteredDescription := choose(n.Noun,prefix)
 	a := filteredDescriptor[n.r.Intn(len(filteredDescriptor))]
-	b := filteredDescription[n.r.Intn(len(filteredDescription))]
+	b := filteredName[n.r.Intn(len(filteredName))]
+
 	return strings.Join([]string{a, b}, sep)
 }
 
-
-
-func hasPrefix(a string, prefix string) bool {
-    return strings.HasPrefix(a, prefix)
+func hasPrefix(a string, startingLetter string) bool {
+    return strings.HasPrefix(a, startingLetter)
 }
 
-func choose(ss []string, prefix string) (ret []string) {
+func choose(ss []string, startingLetter string) (ret []string) {
     for _, s := range ss {
-        if strings.HasPrefix(s, prefix) {
+        if strings.HasPrefix(s, startingLetter) {
             ret = append(ret, s)
         }
     }
@@ -100,9 +69,7 @@ type Namer interface {
 	// Name returns a generated name.
 	Name() string
 	// NameSep returns a generated name with words separated by the given string.
-	NameSep(string) string
-	// NamePrefix returns a generated name with a certain prefix
-	NamePrefix(string) string
-	// Name With seprator and prefix
-	NameSepPrefix(sep string, prefix string) string
+	NameSep(sep string) string
+	// Name returns a generated name with a chosen separator starting letter and possible alliteration
+	NameWithOptions(sep string, startingLetter string, alliterate bool) string
 }
