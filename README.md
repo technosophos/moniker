@@ -1,4 +1,4 @@
-# Monicker: Generate Cute Random Names
+# Moniker: Generate Cute Random Names
 [![Stability: Maintenance](https://masterminds.github.io/stability/maintenance.svg)](https://masterminds.github.io/stability/maintenance.html)
 
 Monicker is a tiny Go library for automatically naming things.
@@ -16,7 +16,7 @@ Your name is "wizened guppy"
 
 ## Library Usage
 
-Easily use Monicker in your code. Here's the complete code behind the
+Easily use Moniker in your code. Here's the complete code behind the
 tool above:
 
 ```go
@@ -34,12 +34,12 @@ func main() {
 }
 ```
 
-Since Monicker compiles the name list into the application, there's no
+Since Moniker compiles the name list into the application, there's no
 requirement that your app has supporting files.
 
 ## Customizing the Words
 
-Monicker ships with a couple of word lists that were written and
+Moniker ships with a couple of word lists that were written and
 approved by a group of giggling school children (and their dad). We
 built a lighthearted list based on animals and descriptive words (mostly
 adjectives).
@@ -50,4 +50,4 @@ offensive pairing, please open an issue!)
 
 Second, we wanted to make it easy for you to modify or build your own
 wordlist. The script in `_generator` can take word lists and convert
-them to Go code that Monicker understands.
+them to Go code that Moniker understands.
