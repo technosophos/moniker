@@ -6,6 +6,15 @@ import (
 	"time"
 )
 
+// NewWith returns a generic namer using the default word lists.
+func NewWith(nlist []string, dlist []string) Namer {
+	return &defaultNamer{
+		Descriptor: dlist,
+		Noun:       nlist,
+		r:          rand.New(rand.NewSource(time.Now().UnixNano())),
+	}
+}
+
 // New returns a generic namer using the default word lists.
 func New() Namer {
 	return &defaultNamer{

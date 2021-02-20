@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	n := moniker.New()
+	n := moniker.NewWith(moniker.Got, moniker.Descriptors)
 	fmt.Printf("Your name is %q\n", n.Name())
 }
