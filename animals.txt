@@ -42,6 +42,7 @@ clownfish
 condor
 coral
 cow
+coyote
 crab
 cricket
 crocodile
@@ -82,8 +83,10 @@ grizzly
 guppy
 hamster
 hare
+hawk
 hedgehog
 heron
+hippopotamus
 hog
 horse
 hound
@@ -228,6 +231,7 @@ walrus
 warthog
 wasp
 waterbuffalo
+weasel
 whale
 whippet
 wildebeest

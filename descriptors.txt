@@ -16,6 +16,8 @@ awesome
 bailing
 bald
 banking
+bedazzled
+bristling
 belligerent
 billowing
 binging
@@ -96,6 +98,7 @@ filled
 flabby
 flailing
 flippant
+fluffy
 foiled
 foolhardy
 foolish
@@ -147,6 +150,7 @@ impressive
 incendiary
 inclined
 independent
+inebriated
 inky
 innocent
 insipid
@@ -314,6 +318,7 @@ sullen
 sweet
 tailored
 tan
+tasty
 telling
 terrific
 terrifying
@@ -372,6 +377,7 @@ wobbly
 womping
 wonderful
 wondering
+wonky
 worn
 wrapping
 wrinkled
